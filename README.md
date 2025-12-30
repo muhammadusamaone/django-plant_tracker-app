@@ -1,0 +1,1 @@
+# django-plant_tracker-app
