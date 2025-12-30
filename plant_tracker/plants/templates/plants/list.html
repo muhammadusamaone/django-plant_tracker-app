@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Indoor Plants Tracker</title>
+</head>
+<body>
+<h2>My Indoor Plants</h2>
+
+<a href="/add/">Add New Plant</a>
+<hr>
+
+<table border="1" cellspacing="5" cellpadding="8">
+    <tr>
+        <th>Name</th>
+        <th>Species</th>
+        <th>Watering Date</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for p in plants %}
+    <tr>
+        <td>{{ p.name }}</td>
+        <td>{{ p.species }}</td>
+        <td>{{ p.watering_date }}</td>
+        <td>
+            <a href="/edit/{{ p.id }}/">Edit</a> |
+            <a href="/delete/{{ p.id }}/">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
